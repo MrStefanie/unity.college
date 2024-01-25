@@ -1,0 +1,149 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1440px) {
+  .container {
+    width: auto;
+  }
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.main-header {
+  background-color: black;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+}
+.main-header a {
+  color: white;
+}
+.main-header a:hover {
+  color: rgb(169, 189, 247);
+}
+.main-header-menu {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.main-header-menu img {
+  filter: "invert()";
+}
+.main-header-menu li {
+  padding: 0;
+  margin: 0;
+}
+.main-header-menu li:first-child {
+  margin-right: 32px;
+}
+.main-header-menu li a {
+  display: block;
+  font-family: "Cuprum";
+  text-decoration: none;
+  padding: 12px;
+}
+
+.promo {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background-color: black;
+  background-image: url("../img/promo-back-2.png");
+  background-size: cover;
+  position: relative;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.promo-central {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.promo-heading {
+  font-family: Montserrat, Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 80px;
+  font-weight: 500;
+}
+.promo-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-family: "Cuprum";
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.promo-button:first-child {
+  margin-right: 16px;
+}
+.promo-button:hover {
+  filter: brightness(0.8);
+}
+.promo-button-signup {
+  background-color: rgb(41, 173, 96);
+  color: white;
+}
+.promo-button-about {
+  background-color: rgb(33, 150, 243);
+  color: white;
+}
+.promo-bottom {
+  box-sizing: border-box;
+  margin: 32px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 8px;
+}
+.promo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.promo-list-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+.promo-list-item_number {
+  font-family: Cuprum;
+  font-size: 48px;
+  padding: 8px;
+}
+.promo-list-item_text {
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */

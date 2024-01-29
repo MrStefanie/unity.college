@@ -32,11 +32,12 @@ a:visited {
   background-color: black;
   width: 100%;
   z-index: 1;
-  position: block;
+  position: fixed;
+  display: none;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 480px) {
   .main-header {
-    position: fixed;
+    display: block;
   }
 }
 .main-header a {
@@ -50,9 +51,6 @@ a:visited {
   list-style: none;
   display: flex;
   align-items: center;
-}
-.main-header-menu img {
-  filter: "invert()";
 }
 .main-header-menu li {
   padding: 0;
@@ -151,18 +149,32 @@ a:visited {
 }
 .promo-button {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 12px 20px;
   border-radius: 15px;
   background-color: white;
   color: black;
   text-decoration: none;
-  font-family: "Cuprum";
+  font-family: "Cuprum", "Arial Narrow";
+  font-size: 20px;
   letter-spacing: 2px;
   font-weight: 600;
   transition: 0.3s;
 }
+@media screen and (max-width: 480px) {
+  .promo-button {
+    box-sizing: border-box;
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 10px;
+  }
+}
 .promo-button:first-child {
   margin-right: 16px;
+}
+@media screen and (max-width: 480px) {
+  .promo-button:first-child {
+    margin: 10px auto;
+  }
 }
 .promo-button:hover {
   filter: brightness(0.8);

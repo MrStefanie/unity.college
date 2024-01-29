@@ -9,6 +9,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .preloader {
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    .preloader__loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+    </style>
+<script
+src="https://code.jquery.com/jquery-3.7.1.min.js"
+integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+crossorigin="anonymous"></script>
 </head>
 <body>
   <header class="main-header">
@@ -103,5 +125,21 @@
   <footer class="main-footer">
 
   </footer>
+  <div class="preloader">
+    <div class="preloader__loader">
+        <img src="img/loader.gif" alt="" />
+    </div>
+</div>
+<script>
+  // Preloader page
+  jQuery(document).ready(function($) {
+    $(window).on('load', function () {
+      var $preloader = $('.preloader'),
+          $loader = $preloader.find('.preloader__loader');
+      $loader.fadeOut();
+      $preloader.delay(250).fadeOut(200);
+    });
+  });
+  </script>
 </body>
 </html>

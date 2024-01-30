@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +8,55 @@
   <title>Разработка игр на Unity - Ногинский колледж</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <style>
     .preloader {
-        background-color: #fff;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1000;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
     }
+
     .preloader__loader {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%)
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
     }
-    </style>
-<script
-src="https://code.jquery.com/jquery-3.7.1.min.js"
-integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-crossorigin="anonymous"></script>
+
+    @media screen and (max-width: 1000px) {
+
+      .preloader,
+      .preloader__loader {
+        animation: loading 1s forwards;
+      }
+    }
+
+    @keyframes loading {
+      0% {
+        opacity: 1;
+      }
+
+      99% {
+        opacity: 0;
+      }
+
+      100% {
+        display: none;
+      }
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <header class="main-header">
     <ul class="main-header-menu container">
@@ -51,7 +76,7 @@ crossorigin="anonymous"></script>
           <img src="img/logo-nk.png">
         </a>
 
-        <h1 class="promo-heading">Стань разработчиком игр<br>на Unity<span class="promo-heading_anim">;</span></h1>
+        <h1 class="promo-heading">Стань разработчиком<br> игр на Unity<span class="promo-heading_anim">;</span></h1>
         <div class="promo-buttons">
           <a class="promo-button promo-button-about" href="#">Узнать подробнее</a>
           <a class="promo-button promo-button-signup" href="#">Записаться на курс</a>
@@ -74,72 +99,174 @@ crossorigin="anonymous"></script>
         </ul>
       </div>
     </section>
-    
+
     <section class="learn">
-      
-        <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <div class="container">
+        <h2 class="learn-heading">
+          Создатели своих собственных миров
+        </h2>
+        <p class="learn-description">
+          Этот курс для тех, кто хочет делиться с другими своим видением мира.<br>
+          Для тех, у кого много идей, но ранее не было возможности их реализовать.
+        </p>
+        <img class="learn-image" src="img/game-world.png" style="" alt="">
+        <ul class="learn-features">
+          <li class="learn-features-item">
+
+            <img src="img/feature-icon-unity.png" alt="">
+            <h3>Движок Unity</h3>
+
+            <p>Осваиваем один из самых популярных игровых движков в мире.</p>
+          </li>
+          <li class="learn-features-item">
+            <img src="img/feature-icon-3d.png" alt="">
+            <h3>3D моделирование</h3>
+            <p>Создаём реалистичные игровые миры, прорабатываем ландшафт и наполнение.</p>
+          </li>
+          <li class="learn-features-item">
+            <img src="img/feature-icon-csharp.png" alt="">
+            <h3>Основы языка C#</h3>
+            <p>Учимся читать, заимствовать и писать код на реальном языке программирования для работы в Unity.</p>
+          </li>
         </ul>
 
-        <div class="container">
-          <h2 class="learn-heading">
-            Создатели своих собственных миров
-          </h2>
-          <p class="learn-description">
-            Этот курс для тех, кто хочет делиться с другими своим видением мира.<br>
-            Для тех, у кого много идей, но ранее не было возможности их реализовать.
-          </p>
-          <img src="img/game-world.png" style="max-width: 60%; display: block; margin: 0 auto;" alt="">
-          <ul class="learn-features">
-            <li class="learn-features-item">
-              <img src="img/feature-icon-unity.png" alt="">
-              <h3>Движок Unity</h3>
-              <p>Осваиваем один из самых популярных игровых движков в мире.</p>
-            </li>
-            <li class="learn-features-item">
-              <img src="img/feature-icon-3d.png" alt="">
-              <h3>3D моделирование</h3>
-              <p>Создаём реалистичные игровые миры, прорабатываем ландшафт и наполнение.</p>
-            </li>
-            <li class="learn-features-item">
-              <img src="img/feature-icon-csharp.png" alt="">
-              <h3>Основы языка C#</h3>
-              <p>Учимся читать, заимствовать и писать код на реальном языке программирования для работы в Unity.</p>
-            </li>
-          </ul>
-  
-        </div>
-      </section>
+      </div>
+    </section>
+    <section class="multilateral">
+      <div class="container">
+        <h2 class="multilateral-heading">
+          Ученик развивается  с нескольких сторон
+        </h2>
+        <ul class="multilateral-list">
+          <li class="multilateral-list-item">
+            <h3>
+              Освоит программирование
+            </h3>
+            <p>
+              Научится работать с функциями, алгоритмами, переменными, циклами. Он закрепит навыки на языке программирования С# и начнёт работать с искусственным интеллектом.
+            </p>
+          </li>
+          <li class="multilateral-list-item">
+            <h3>
+              Научится делать проекты
+            </h3>
+            <p>
+              Ученик создаст несколько игр: придумает сценарии, разработает уровни, спроектирует интерфейсы, добавит спецэффекты, напишет диалоги. Это улучшит усидчивость, логическое и творческое мышление.
+            </p>
+          </li>
+          <li class="multilateral-list-item">
+            <h3>
+              Сможет презентовать результаты
+            </h3>
+            <p>
+              Ученик научится готовить выступления и профессионально реагировать на вопросы. Эти навыки помогут не просто создавать проекты, но и рассказывать о них публично.
+            </p>
+          </li>
+          <li class="multilateral-list-item">
+            <h3>
+              Попробует себя в разных профессиях
+            </h3>
+            <p>
+              Ученик не просто создаёт игры, а примеряет роль каждого специалиста и изучает специфику его работы. Это поможет выбрать дальнейший путь развития.
+            </p>
+          </li>
+          <li class="multilateral-list-item">
+            <h3>
+              Научится работать в команде
+            </h3>
+            <p>
+              Ребята работают как в настоящей IT-компании: распределяют роли, планируют сроки, слушают разные точки зрения, договариваются. Эти навыки помогут избегать конфликтов в школе, работе и личной жизни.
+            </p>
+          </li>
+          <li class="multilateral-list-item">
+            <img src="img/learning-guy.png" alt="">
+          </li>
+        </ul>
+      </div>
+    </section>
+  <div class="modules">
+    <h2>
+      Демонстрация выполняемых проектов
+    </h2>
+    <section class="modules-demo">
+      <h3>
+        Глава 1. Прототипирование
+      </h3>
+      <video muted loop autoplay>
+        <source src="video/module1-demo-video.webm" type="video/webm">
+        <source src="video/module1-demo-video.mp4" type="video/webm">
+      </video>
+      <a class="modules-demo-button" href="chapter1-demo">Запустить демо-проект</a>
+      <p class="modules-demo-button_descr">Попробуйте в своем браузере!</p>
+    </section>
+    <section class="modules-demo">
+      <h3>
+        Глава 2. Проектирование игрового мира
+      </h3>
+      <video muted loop autoplay>
+        <source src="video/module1-demo-video.webm" type="video/webm">
+        <source src="video/module1-demo-video.mp4" type="video/webm">
+      </video>
+      <a class="modules-demo-button" href="chapter2-demo">Запустить демо-проект</a>
+      <p class="modules-demo-button_descr">Попробуйте в своем браузере!</p>
+    </section>
+    <section class="modules-demo">
+      <h3>
+        Глава 3. Создание логики игры на языке C#
+      </h3>
+      <video muted loop autoplay>
+        <source src="video/module1-demo-video.webm" type="video/webm">
+        <source src="video/module1-demo-video.mp4" type="video/webm">
+      </video>
+      <a class="modules-demo-button" href="chapter3-demo">Запустить демо-проект</a>
+      <p class="modules-demo-button_descr">Попробуйте в своем браузере!</p>
+    </section>
+    <section class="modules-demo">
+      <h3>
+        Глава 4. Разработка 3D-платформера
+      </h3>
+      <video muted loop autoplay>
+        <source src="video/module1-demo-video.mp4" type="video/webm">
+        <source src="video/module1-demo-video.webm" type="video/webm">
+      </video>
+      <a class="modules-demo-button" href="chapter4-demo">Запустить демо-проект</a>
+      <p class="modules-demo-button_descr">Попробуйте в своем браузере!</p>
+    </section>
   </div>
-    
   </main>
   <footer class="main-footer">
 
   </footer>
-  <div class="preloader">
-    <div class="preloader__loader">
-        <img src="img/loader.gif" alt="" />
-    </div>
-</div>
-<script>
+  <!-- <div class="preloader">
+      <div class="preloader__loader">
+          <img src="img/loader.gif" alt="" />
+      </div>
+  </div> -->
+  <!-- <script>
   // Preloader page
-  jQuery(document).ready(function($) {
-    $(window).on('load', function () {
-      var $preloader = $('.preloader'),
-          $loader = $preloader.find('.preloader__loader');
-      $loader.fadeOut();
-      $preloader.delay(250).fadeOut(200);
-    });
-  });
-  </script>
+  // jQuery(document).ready(function($) {
+  //   $(window).on('load', function () {
+  //     var $preloader = $('.preloader'),
+  //         $loader = $preloader.find('.preloader__loader');
+  //     $loader.fadeOut();
+  //     $preloader.delay(250).fadeOut(200);
+  //   });
+  // });
+  </script> -->
 </body>
+
 </html>

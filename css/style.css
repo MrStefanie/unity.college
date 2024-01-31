@@ -78,7 +78,7 @@ a:visited {
 
 .container {
   width: 1440px;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 @media screen and (max-width: 1440px) {
   .container {

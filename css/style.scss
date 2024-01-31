@@ -1,4 +1,4 @@
-
+@import 'animations';
 
 html {
   margin: 0;
@@ -25,10 +25,10 @@ a:visited {
 
 @mixin second-heading {
   font-family: Montserrat, Helvetica, Tahoma, Arial, sans-serif;
-    font-size: 28px;
-    font-weight: 600;
+  font-size: 28px;
+  font-weight: 600;
     
-    text-align: center;
+  text-align: center;
     @media screen and (min-width: 480px) {
       font-size: 36px;
     }
@@ -54,9 +54,14 @@ a:visited {
   box-shadow: 0px 2px 20px rgba($color: #000000, $alpha: 0.15);
   position: fixed;    
   display: none;
-  @media screen and (min-width: 480px) {
+
+  @media screen and (min-width: 480px) and (min-height: 640px) {
     display: block;
   }
+  @media screen and (max-width: 768px) {
+    position: static;
+  }
+
   a {
     color: white;
     &:hover{
@@ -92,11 +97,13 @@ a:visited {
 .promo {
   display: flex;
   box-sizing: border-box;
+  position: relative;
 
   width: 100%;
   height: 100vh;
-  @media screen and (max-width: 480px) {
-    height: 95vh;
+  @media screen and (max-width: 541px) {
+    display: block;
+    height: auto;
     padding-top: 20px;
   }
   @media screen and (min-width: 720px) {
@@ -113,8 +120,31 @@ a:visited {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media screen and (max-height: 640px) {
+    flex-direction: row;
+  }
+
+
+  &-backvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fade-in 1.3s;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+      filter: brightness(0.7);
+    }
+  }
 
   &-central {
+    position: relative;
+    z-index: 1;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -124,9 +154,16 @@ a:visited {
     @media screen and (max-width: 480px) {
       align-items: stretch;
     }
+
+    @media screen and (max-height: 640px) {
+      flex-direction: row;
+    }
   }
 
   &-link-college {
+    position: relative;
+    z-index: 1;
+
     transition: .3s;
     &:hover {
      opacity: .8;
@@ -142,32 +179,26 @@ a:visited {
   }
 
   &-bottom {
-    
+    position: relative;
+    z-index: 1;
   }
+
   &-heading {
     font-family: Montserrat, Helvetica, Tahoma, Arial, sans-serif;
     font-size: 32px;
     font-weight: 500;
     margin-top: 0;
-    &_anim{
+    text-shadow: 0 0 40px rgba(black, 0.7);
+    &_anim {
       animation: blinking 2s infinite;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (min-height: 640px) {
       font-size: 50px;      
     }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1020px) and (min-height: 768px) {
       font-size: 80px;      
     }
   }
-
-@keyframes blinking {
-  0% {
-    opacity: 1.0;
-  }
-  50% {
-    opacity: 0.1;
-  }
-}
 
   &-button {
     display: inline-block;
@@ -196,7 +227,7 @@ a:visited {
     }
     &:first-child {
       margin-right: 16px;
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: 480px), (max-height: 640px) {
         margin: 10px auto;
     }
     }
@@ -240,17 +271,30 @@ a:visited {
       @media screen and (max-width: 480px) {
         padding: 4px;
       }
+      @media screen and (max-width: 1080px) {
+        max-width: 250px;
+      }
+      @media screen and (max-height: 640px) {
+        padding: 0;
+      }
       &_number {
         font-family: Cuprum;
         font-size: 48px;
         padding: 8px;
+        @media screen and (max-height: 640px) {
+          font-size: 32px;
+          padding: 4px;
+        }
       }
       &_text {
         font-family: 'Montserrat Alternates';
         font-size: 16px;
-        
+        @media screen and (max-height: 640px) {
+          font-size: 14px;
+        }
       }
     }
+    
   }
 
 }
@@ -315,6 +359,10 @@ a:visited {
       border-radius: 20px;
       text-align: center;
       z-index: 1;
+
+      @media screen and (max-width: 360px) {
+        min-width: 200px;
+      }
 
       &:nth-child(2) {
         background: rgb(247, 247, 247);
@@ -443,7 +491,12 @@ a:visited {
   position: relative;
   box-shadow: 0px -10px 20px 7px rgba(0, 0, 0, 0.69);
   
-  padding: 10px;
+  padding: {
+    top: 1px;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+  }
   &-heading {
     @include second-heading();
   }
@@ -461,6 +514,7 @@ a:visited {
       width: 70%;
       margin-left: auto;
       margin-right: 20px;
+      margin-top: -50px;
     }
   }
     h3 {
@@ -472,12 +526,15 @@ a:visited {
       
     }
     p {
+      position: relative;
       font-family: 'Montserrat Alternates';
       font-size: 16px;
       @media screen and (min-width: 480px) {
         font-size: 1.5em;
       }
-      
+      img {
+        
+      }
     }
   }
 }
@@ -566,18 +623,3 @@ a:visited {
   }
 }
 
-@keyframes animate {
-
-    0%{
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
-    }
-
-    100%{
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-        border-radius: 50%;
-    }
-
-}

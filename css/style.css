@@ -231,10 +231,6 @@ a:visited {
   margin-top: 0;
   text-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
 }
-.promo-heading_anim {
-  -webkit-animation: blinking 2s infinite;
-          animation: blinking 2s infinite;
-}
 @media screen and (min-width: 768px) and (min-height: 640px) {
   .promo-heading {
     font-size: 50px;
@@ -244,6 +240,10 @@ a:visited {
   .promo-heading {
     font-size: 80px;
   }
+}
+.promo-heading_anim {
+  -webkit-animation: blinking 2s infinite;
+          animation: blinking 2s infinite;
 }
 .promo-button {
   display: inline-block;
@@ -736,4 +736,63 @@ a:visited {
     top: 0px;
     color: inherit !important;
   }
+}
+
+.learning {
+  padding-top: 75px;
+}
+.learning-heading {
+  font-family: Montserrat, Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 0;
+  text-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+}
+@media screen and (min-width: 768px) and (min-height: 640px) {
+  .learning-heading {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1020px) and (min-height: 768px) {
+  .learning-heading {
+    font-size: 80px;
+  }
+}
+.learning-programm-heading {
+  font-family: "Montserrat";
+  font-size: 36px;
+}
+.learning-programm-modules {
+  display: flex;
+  justify-content: space-around;
+}
+.learning-programm-module {
+  background-color: #fafafa;
+  border-radius: 20px;
+  padding: 20px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+.learning-programm-module_heading {
+  font-family: "Cuprum";
+  font-size: 32px;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 8px;
+  border: 2px solid green;
+  border-radius: 20px;
+}
+.learning-programm-module_lessons {
+  font-family: "Montserrat Alternates";
+  font-size: 20px;
+  font-weight: 500;
+}
+.learning-programm-module_lessons li {
+  margin: 8px 0;
+}
+.learning-programm-module_lessons .lesson_result {
+  font-weight: 700;
+  color: green;
 }/*# sourceMappingURL=style.css.map */

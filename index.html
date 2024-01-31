@@ -39,7 +39,7 @@
   <header class="main-header">
     <ul class="main-header-menu container">
       <li class="header-menu-item"><a href="/"><img src="img/unity-logo2.svg" height="32px"></a></li>
-      <li class="header-menu-item"><a href="#">Программа курса</a></li>
+      <li class="header-menu-item"><a href="learning.html">Программа курса</a></li>
       <li class="header-menu-item"><a href="#">Демо-проекты</a></li>
       <li class="header-menu-item"><a href="#">Об обучении</a></li>
       <li class="header-menu-item"><a href="#">Контакты и оплата</a></li>
@@ -50,8 +50,10 @@
     <section class="promo">
       <div class="promo-backvideo">
         <video muted loop autoplay oncontextmenu="return false;" poster="img/promo-back-2.webp" >
-          <source src="video/promo-videoback.mp4" type="video/webm">
-          <source src="video/promo-videoback.webm" type="video/webm">
+          <source src="video/promo-videoback.mp4" type="video/webm" media="only screen and (min-device-width: 568px)">
+          <source src="video/promo-videoback.webm" type="video/webm" media="only screen and (min-device-width: 568px)">
+          <source src="video/promo-videoback-mobile.mp4" type="video/webm" media="only screen and (max-device-width: 568px)">
+          <source src="video/promo-videoback-mobile.webm" type="video/webm" media="only screen and (max-device-width: 568px)">
       </video>
       </div>
 

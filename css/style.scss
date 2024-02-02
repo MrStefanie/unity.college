@@ -4,6 +4,7 @@ html {
   margin: 0;
   padding: 0;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -581,6 +582,15 @@ a:visited {
       margin: 0 auto;
       width: 90%;
       max-width: 1000px;
+      transition: 0.3s;
+      &:hover {
+        filter: brightness(0.8);
+        
+      }
+      &:hover ~ .modules-demo-button {
+        background-color: lighten(royalblue, 2);
+        box-shadow: 0 0 30px 5px rgba($color: #969696, $alpha: 0.1);
+      }
     }
 
     &-button {

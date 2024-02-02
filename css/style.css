@@ -687,6 +687,14 @@ a:visited {
   margin: 0 auto;
   width: 90%;
   max-width: 1000px;
+  transition: 0.3s;
+}
+.modules-demo video:hover {
+  filter: brightness(0.8);
+}
+.modules-demo video:hover ~ .modules-demo-button {
+  background-color: #4a70e2;
+  box-shadow: 0 0 30px 5px rgba(150, 150, 150, 0.1);
 }
 .modules-demo-button {
   position: relative;
